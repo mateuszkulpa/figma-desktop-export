@@ -1,0 +1,20 @@
+{
+  "name": "export-plugin",
+  "id": "1350894532674201404",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": ["https://localhost:3000"],
+    "devAllowedDomains": [
+      "http://localhost:3000"
+    ],
+    "reasoning": "asdad"
+  },
+  "documentAccess": "dynamic-page"
+}

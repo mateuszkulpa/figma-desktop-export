@@ -1,0 +1,26 @@
+<h2>Print PDF</h2>
+<button id="create">Print</button>
+<button id="cancel">Cancel</button>
+<select id="printers"></select>
+<script>
+document.getElementById('create').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'print-pdf', printer: document.getElementById('printers').value } }, '*');
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*');
+}
+
+fetch("http://localhost:3000/printers")
+  .then(res => res.json())
+  .then((printers) => {
+    const printersSelect = document.getElementById('printers');
+    printers.forEach(printer => {
+      const option = document.createElement('option');
+      option.value = printer;
+      option.textContent = printer;
+      printersSelect.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Error fetching printers:', error));
+</script>

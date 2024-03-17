@@ -3,6 +3,6 @@
     "scripts": {
         "build:plugin": "pnpm --filter export-plugin build",
         "build:server": "pnpm --filter server build",
-        "run:server": "node ./server/.output/server/index.mjs"
+        "run:server": "pnpm --filter server preview"
     }
 }

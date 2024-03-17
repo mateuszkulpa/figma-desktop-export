@@ -1,8 +1,10 @@
 {
     "private": true,
     "scripts": {
-        "build:plugin": "pnpm --filter export-plugin build",
+        "dev:server": "pnpm --filter server dev",
         "build:server": "pnpm --filter server build",
-        "run:server": "pnpm --filter server preview"
+        "run:server": "pnpm --filter server preview",
+        "dev:plugin": "pnpm --filter export-plugin watch",
+        "build:plugin": "pnpm --filter export-plugin build"
     }
 }
